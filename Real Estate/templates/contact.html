@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="static/footer.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container px-0 mb-3">
+        <img src="/static/img/contact2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="container mb-3 py-4">
+        <h1 class="text-center">Contact Us</h1>
+        <form method="post" action="/contact">
+        {% csrf_token %}    
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number">
+        </div>
+        <div class="mb-3">
+            <label for="review" class="form-label">Add Your Review</label>
+            <textarea class="form-control" id="review" name="review" rows="3"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    </div>
+
+    <footer class="footer bg-dark">
+        <div class="footer__addr">
+          <h1 class="footer__logo">Real Estate</h1>
+              
+          <h2>Contact</h2>
+          
+          <address>
+            support@realestate.com<br>
+                
+            <a class="footer__btn" href="mailto:support@realestate.com">Email Us</a>
+          </address>
+        </div>
+        
+        <ul class="footer__nav">
+          <li class="nav__item">
+            <h2 class="nav__title"><b>Company</b></h2>
+      
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Careers</a>
+              </li>
+      
+              <li>
+                <a href="#">For Partners</a>
+              </li>
+                  
+              <li>
+                <a href="#">Annual Return</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav__item">
+            <h2 class="nav__title"><b>Media</b></h2>
+      
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Online</a> 
+              </li>
+      
+              <li>
+                <a href="#">Print</a>
+              </li>
+                  
+              <li>
+                <a href="#">Alternative Ads</a>
+              </li>
+            </ul>
+          </li>
+  
+          <li class="nav__item">
+            <h2 class="nav__title"><b>Explore</b></h2>
+            
+            <ul class="nav__ul">
+                 
+              <li>
+                <a href="#">News</a>
+              </li>
+              
+              <li>
+                <a href="#">Home Loans</a>
+              </li>
+              
+              <li>
+                <a href="#">Internationa</a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav__item">
+            <h2 class="nav__title"><b>Legal</b></h2>
+            
+            <ul class="nav__ul">
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              
+              <li>
+                <a href="#">Terms of Use</a>
+              </li>
+              
+              <li>
+                <a href="#">Sitemap</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        
+        <div class="legal">
+          <p>&copy; 2023 Real Estate. All rights reserved.</p>
+          
+          <div class="legal__links">
+            <span>Created And Designed By   <span class="heart"> ♥ </span> Rutvik Tetambe</span>
+          </div>
+        </div>
+        <div class="wrapper text-center">
+          <a href="https://www.facebook.com/login" target="_blank" class="icon facebook">
+            <div class="tooltip">Facebook</div>
+            <span><i class="fab fa-facebook-f"></i></span>
+          </a>
+          <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D" target="_blank" class="icon twitter">
+            <div class="tooltip">Twitter</div>
+            <span><i class="fab fa-twitter"></i></span>
+          </a>
+          <a href="https://www.instagram.com/accounts/login/" target="_blank" class="icon instagram">
+            <div class="tooltip">Instagram</div>
+            <span><i class="fab fa-instagram"></i></span>
+          </a>
+          <a href="https://studio.youtube.com/" target="_blank" class="icon youtube">
+            <div class="tooltip">Youtube</div>
+            <span><i class="fab fa-youtube"></i></span>
+          </a>
+        </div>
+    
+      </footer>
+      
+</body>
+</html>
+{% endblock body %}
